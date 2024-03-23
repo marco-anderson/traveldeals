@@ -18,3 +18,11 @@ gcloud functions deploy send_email_welcome \
 --trigger-event=providers/cloud.pubsub/eventTypes/topic.publish \
 --trigger-topic=travel_deals_signup
 ```
+
+```
+gcloud functions deploy send_email_welcome \
+--entry-point sendWelcome \
+--runtime nodejs18 \
+--trigger-topic=travel_deals_signup \
+--no-gen2
+```
